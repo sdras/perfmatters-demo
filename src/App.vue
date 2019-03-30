@@ -1,18 +1,10 @@
 <template>
   <div id="app">
     <img alt="estelle" src="./assets/estelle.png">
-    <app-icon-demo/>
   </div>
 </template>
 
 <script>
-import AppIconDemo from "./components/AppIconDemo.vue";
-
-export default {
-  components: {
-    AppIconDemo
-  }
-};
 </script>
 
 <style lang="scss">
