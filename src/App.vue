@@ -10,10 +10,17 @@
       <div class="contain">
         <app-graphic-estelle width="600"/>
         <div class="hearts" v-if="isShowing">
-          <app-icon-base view-box="100" iconColor="crimson">
+          <app-icon-base width="30" height="30" view-box="100" iconColor="crimson">
             <app-icon-heart></app-icon-heart>
           </app-icon-base>
-          <app-icon-base view-box="100" iconColor="crimson">
+
+          <app-icon-base
+            width="30"
+            height="30"
+            view-box="100"
+            iconColor="crimson"
+            style="transform:translateX(15px)"
+          >
             <app-icon-heart></app-icon-heart>
           </app-icon-base>
         </div>
@@ -42,8 +49,10 @@ export default {
 </script>
 
 <style lang="scss">
+$basebeige: #f6bd86;
+
 body {
-  background: #f6bd86;
+  background: $basebeige;
 }
 
 #app {
@@ -93,11 +102,13 @@ button:focus {
 }
 
 button:focus {
-  outline: 1px solid #fff;
+  outline: 1px solid $basebeige;
 }
 
 .hearts {
   position: absolute;
+  top: 118px;
+  left: 109px;
 }
 
 main {
