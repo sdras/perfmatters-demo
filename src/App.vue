@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <button @click="isShowing = !isShowing">Estelle loves you!</button>
+    <input v-model="hairColor" type="color" id="hair" name="hair">
+    <label for="hair">Hair</label>
 
     <main>
       <div class="contain">
-        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="600">
+        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="800">
       </div>
 
       <div class="contain">
-        <app-graphic-estelle width="600"/>
+        <app-graphic-estelle width="800" :hairColor="hairColor"/>
+
         <div class="hearts" v-if="isShowing">
           <app-icon-base width="30" height="30" view-box="100" iconColor="crimson">
             <app-icon-heart></app-icon-heart>
@@ -37,7 +40,8 @@ import AppGraphicEstelle from "./components/AppGraphicEstelle.vue";
 export default {
   data() {
     return {
-      isShowing: false
+      isShowing: false,
+      hairColor: null
     };
   },
   components: {
@@ -72,7 +76,7 @@ button {
   display: inline-block;
   border: none;
   padding: 0.75rem 1.5rem;
-  margin: 0;
+  margin: 0 50px 0 0;
   text-decoration: none;
   background: #ec008c; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -95,6 +99,20 @@ button {
   -moz-appearance: none;
 }
 
+button.hair {
+  background: #00467f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1c9963,
+    #00467f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1c9963,
+    #00467f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 button:hover,
 button:focus {
   transition: all 300ms ease-in-out;
@@ -103,6 +121,10 @@ button:focus {
 
 button:focus {
   outline: 1px solid $basebeige;
+}
+
+input {
+  margin-right: 10px;
 }
 
 .hearts {
