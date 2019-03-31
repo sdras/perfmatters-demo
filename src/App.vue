@@ -9,7 +9,7 @@
 
     <main>
       <div class="contain">
-        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="800">
+        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="300">
       </div>
 
       <div class="contain">
