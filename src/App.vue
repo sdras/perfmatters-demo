@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <app-controls @changeShowing="isShowing = !isShowing" :isShowing="isShowing"/>
+    <app-controls
+      @changeShowing="isShowing = !isShowing"
+      :isShowing="isShowing"
+      :hairColor.sync="hairColor"
+    />
 
     <main>
       <div class="contain">

@@ -4,7 +4,12 @@
       <span v-if="isShowing">Estelle doesn't love you :(</span>
       <span v-else>Estelle loves you!</span>
     </button>
-    <input v-model="hairColor" type="color" id="hair" name="hair">
+    <input
+      @input="$emit('update:hairColor', $event.target.value)"
+      type="color"
+      id="hair"
+      name="hair"
+    >
     <label for="hair">Hair</label>
   </div>
 </template>
@@ -15,6 +20,9 @@ export default {
     isShowing: {
       type: Boolean,
       default: false
+    },
+    hairColor: {
+      type: String
     }
   }
 };
