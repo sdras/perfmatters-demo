@@ -1,59 +1,15 @@
 <template>
   <div id="app">
-    <app-controls
-      @changeShowing="isShowing = !isShowing"
-      :isShowing="isShowing"
-      :hairColor.sync="hairColor"
-    />
-
     <main>
       <div class="contain">
-        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="800">
-      </div>
-
-      <div class="contain">
-        <app-graphic-estelle width="800" :hairColor="hairColor"/>
-
-        <div class="hearts" v-if="isShowing">
-          <app-icon-base width="60" height="60" view-box="100" iconColor="crimson">
-            <app-icon-heart></app-icon-heart>
-          </app-icon-base>
-
-          <app-icon-base
-            width="60"
-            height="60"
-            view-box="100"
-            iconColor="crimson"
-            style="transform:translateX(45px)"
-          >
-            <app-icon-heart></app-icon-heart>
-          </app-icon-base>
-        </div>
+        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="300">
       </div>
     </main>
   </div>
 </template>
 
 <script>
-import AppControls from "./components/AppControls.vue";
-import AppIconBase from "./components/AppIconBase.vue";
-import AppIconHeart from "./components/AppIconHeart.vue";
-import AppGraphicEstelle from "./components/AppGraphicEstelle.vue";
-
-export default {
-  data() {
-    return {
-      isShowing: false,
-      hairColor: null
-    };
-  },
-  components: {
-    AppControls,
-    AppIconBase,
-    AppIconHeart,
-    AppGraphicEstelle
-  }
-};
+export default {};
 </script>
 
 <style lang="scss">
