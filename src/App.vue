@@ -2,7 +2,7 @@
   <div id="app">
     <main>
       <section class="contain">
-        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="800">
+        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="300">
       </section>
     </main>
   </div>
