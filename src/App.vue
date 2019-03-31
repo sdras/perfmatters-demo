@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <button @click="isShowing = !isShowing">
-      <span v-if="isShowing">Estelle doesn't love you :(</span>
-      <span v-else>Estelle loves you!</span>
-    </button>
-    <input v-model="hairColor" type="color" id="hair" name="hair">
-    <label for="hair">Hair</label>
+    <app-controls @changeShowing="isShowing = !isShowing" :isShowing="isShowing"/>
 
     <main>
       <div class="contain">
@@ -36,6 +31,7 @@
 </template>
 
 <script>
+import AppControls from "./components/AppControls.vue";
 import AppIconBase from "./components/AppIconBase.vue";
 import AppIconHeart from "./components/AppIconHeart.vue";
 import AppGraphicEstelle from "./components/AppGraphicEstelle.vue";
@@ -48,6 +44,7 @@ export default {
     };
   },
   components: {
+    AppControls,
     AppIconBase,
     AppIconHeart,
     AppGraphicEstelle
