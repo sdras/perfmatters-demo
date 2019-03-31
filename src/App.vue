@@ -97,7 +97,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
-  border-radius: 0;
+  border-radius: 20px;
   transition: all 250ms ease-in-out;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -120,11 +120,16 @@ button.hair {
 button:hover,
 button:focus {
   transition: all 300ms ease-in-out;
-  border-radius: 20px;
+  box-shadow: 0 5px 10px 0px #79114f9e;
+}
+
+button:active {
+  box-shadow: none;
 }
 
 button:focus {
-  outline: 1px solid $basebeige;
+  outline: 0;
+  box-shadow: 0 5px 10px 0px rgba(119, 16, 78, 0.62);
 }
 
 input {
