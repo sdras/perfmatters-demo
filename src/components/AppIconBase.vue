@@ -19,7 +19,7 @@ export default {
   props: {
     iconName: {
       type: String,
-      default: "box"
+      default: "write"
     },
     width: {
       type: [Number, String],

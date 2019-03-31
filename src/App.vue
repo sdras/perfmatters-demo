@@ -1,15 +1,14 @@
 <template>
   <div id="app">
     <main>
-      <div class="contain">
-        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="300">
-      </div>
+      <section class="contain">
+        <img class="estellejpg" alt="estelle" src="./assets/estelle.png" width="800">
+      </section>
     </main>
   </div>
 </template>
 
 <script>
-export default {};
 </script>
 
 <style lang="scss">
