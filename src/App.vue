@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <button @click="isShowing = !isShowing">Estelle loves you!</button>
+    <button @click="isShowing = !isShowing">
+      <span v-if="isShowing">Estelle doesn't love you :(</span>
+      <span v-else>Estelle loves you!</span>
+    </button>
     <input v-model="hairColor" type="color" id="hair" name="hair">
     <label for="hair">Hair</label>
 
@@ -13,16 +16,16 @@
         <app-graphic-estelle width="800" :hairColor="hairColor"/>
 
         <div class="hearts" v-if="isShowing">
-          <app-icon-base width="30" height="30" view-box="100" iconColor="crimson">
+          <app-icon-base width="60" height="60" view-box="100" iconColor="crimson">
             <app-icon-heart></app-icon-heart>
           </app-icon-base>
 
           <app-icon-base
-            width="30"
-            height="30"
+            width="60"
+            height="60"
             view-box="100"
             iconColor="crimson"
-            style="transform:translateX(15px)"
+            style="transform:translateX(45px)"
           >
             <app-icon-heart></app-icon-heart>
           </app-icon-base>
@@ -94,6 +97,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
+  border-radius: 0;
   transition: all 250ms ease-in-out;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -129,8 +133,8 @@ input {
 
 .hearts {
   position: absolute;
-  top: 118px;
-  left: 109px;
+  top: 315px;
+  left: 305px;
 }
 
 main {
